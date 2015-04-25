@@ -1,6 +1,7 @@
 TwitterApp::Application.routes.draw do
   root 'static_pages#home'
   get 'signup' => 'users#new'
+  resources :users
   # get 'help' => 'static_pages#help'
 
   # The priority is based upon order of creation: first created -> highest priority.
