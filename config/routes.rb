@@ -5,6 +5,7 @@ TwitterApp::Application.routes.draw do
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
   resources :users
+  resources :microposts,          only: [:create, :destroy]
   # get 'help' => 'static_pages#help'
 
   # The priority is based upon order of creation: first created -> highest priority.
